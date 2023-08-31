@@ -9,10 +9,9 @@ Hi. My name is Andrew and I am currently a junior in DNHS.
 
 I go by he/him pronouns.
 
-![image](https://github.com/andri-c/student1/assets/143442846/f70e2e88-29d9-4852-a550-d38896d94a46)
+https://i.ibb.co/LPfd95P/dog.jpg
 
 ## My Freeform Image
-![image](https://github.com/andri-c/student2/assets/143442846/baebd031-c030-481d-add4-b5a73862e817)
-
+https://ibb.co/zZqkZ2k
 
 
