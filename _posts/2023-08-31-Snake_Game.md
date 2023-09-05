@@ -2,7 +2,7 @@
 toc: true
 comments: false
 layout: post
-title: Avacado Eater 
+title: Snek
 description: This is a game based off of Snake, except instead of eating apples, we are eating avacados!
 type: plans
 courses: { compsci: {week: 2} }
