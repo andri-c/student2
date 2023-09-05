@@ -82,7 +82,7 @@ courses: { compsci: {week: 2} }
     <div class="container bg-secondary" style="text-align:center;">
         <!-- Main Menu -->
         <div id="menu" class="py-4 text-light">
-            <p>Welcome to Snake, press <span style="background-color: #C0EBB9; color: #C0EBB9">space</span> to begin</p>
+            <p>Welcome to Snake, press <span style="background-color: #FFFFFF; color: #295C21">space</span> to begin</p>
             <a id="new_game" class="link-alert">new game</a>
             <a id="setting_menu" class="link-alert">settings</a>
         </div>
