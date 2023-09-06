@@ -6,7 +6,7 @@ layout: post
 type: help
 title: Tool References
 ---
-
+Below gives some basic instructions and guides on how to use the codes for vscode, linux, etc.
 ### `Visual Studio Code` [Overview](https://code.visualstudio.com/docs/introvideos/basics)
 
 ### `Jupyter Notebooks` [Review Jupyter basics 6-min](https://www.youtube.com/watch?v=3jZYC9rGrNg)

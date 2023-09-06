@@ -3,7 +3,7 @@ toc: true
 comments: false
 layout: post
 title: Starting off 
-description: Example Blog!!!  This shows planning and notes from hacks.
+description: This shows the first week and what we did.
 type: plans
 courses: { compsci: {week: 0} }
 ---
