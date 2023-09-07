@@ -28,5 +28,7 @@ An emulator made for the cloud servers to resemble the real terminal others are 
 
 ## Simple Commands for the Terminal
 $cd, meaning change directory
+
 $make, creating the local server
+
 $clear, clears out the terminal
