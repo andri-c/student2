@@ -1,9 +1,9 @@
 ---
-toc: true
+toc: false
 comments: true
 layout: post
 title: Newly Learned Information!
-description: This shows all the new material I learned
+description: This shows all the new material I learned.
 courses: { compsci: {week: 1} }
 type: hacks
 ---
