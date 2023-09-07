@@ -14,3 +14,4 @@ Learning outcome.  Installing Tools and showing usage of VSCode.
 - Thursday - Setup Tools on laptop and/or Cloud Computer.
 - Friday - Review and test as a Pair. Spend 25 minutes at one keyboard then switch for next 25 minutes.
 
+I was not put in the class for the first week. Therefore, I was instead put into a trio with Katie and Deeshi and was assisted help downloading files. When downloading the cloud, it was a struggle to download the rubies and necessary files to start, but I was able to redownload everything the next day and it all went smoothly.

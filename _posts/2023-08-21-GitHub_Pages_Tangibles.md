@@ -3,7 +3,7 @@ toc: true
 comments: true
 layout: post
 title: Checklist
-description: Example Review Ticket!!! This will help us communicate results.
+description: A summary of accomplishments in which we hope to learn throughout the trimester.
 type: tangibles
 courses: { compsci: {week: 1} }
 ---

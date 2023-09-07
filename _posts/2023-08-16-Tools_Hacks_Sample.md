@@ -3,7 +3,7 @@ toc: true
 comments: true
 layout: post
 title: Helpful Information
-description: This shows different 
+description: This shows different installments in which many people had to install depending what device you have.
 courses: { compsci: {week: 0} }
 type: hacks
 ---
