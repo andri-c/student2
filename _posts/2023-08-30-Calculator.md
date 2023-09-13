@@ -2,8 +2,8 @@
 toc: true
 comments: false
 layout: post
-title: Calculator MD
-description: Grab of the Calculator from APCSA repo.
+title: Scientific Calculator
+description: A calculator created through java script.
 type: tangibles
 courses: { compsci: {week: 2} }
 ---

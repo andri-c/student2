@@ -8,7 +8,6 @@ courses: { compsci: {week: 3} }
 type: hacks
 ---
 
-%%html
 
 <!-- Help Message -->
 <h3>Input scores, press tab to add each new number.</h3>
