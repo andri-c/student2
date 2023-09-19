@@ -13,18 +13,27 @@ type: hacks
 <h3>Input scores, press tab to add each new number.</h3>
 <!-- Totals -->
 <ul>
-<li>
+  <li>
     Total : <span id="total">0.0</span>
     Count : <span id="count">0.0</span>
     Average : <span id="average">0.0</span>
-</li>
+    Maximum : <span id="maximum">0.0</span>
+    Minimum : <span id="minimum">0.0</span>
+  </li>
 </ul>
 <!-- Rows added using scores ID -->
 <div id="scores">
-    <!-- javascript generated inputs -->
+  <!-- javascript generated inputs -->
 </div>
 
+<!-- Clear button -->
+<button id="clearButton">Clear</button>
+
 <script>
+// Variables to keep track of maximum and minimum scores
+var maxScore = -Infinity;
+var minScore = Infinity;
+
 // Executes on input event and calculates totals
 function calculator(event) {
     var key = event.key;
@@ -42,17 +51,29 @@ function calculator(event) {
                 var parsedValue = parseFloat(value);
                 total += parsedValue;  // add to running total
                 count++;
+
+                // Update maximum and minimum scores
+                if (parsedValue > maxScore) {
+                    maxScore = parsedValue;
+                }
+                if (parsedValue < minScore) {
+                    minScore = parsedValue;
+                }
             }
         }
 
-        // update totals
+        // update totals, maximum, and minimum
         document.getElementById('total').innerHTML = total.toFixed(2); // show two decimals
         document.getElementById('count').innerHTML = count;
 
         if (count > 0) {
             document.getElementById('average').innerHTML = (total / count).toFixed(2);
+            document.getElementById('maximum').innerHTML = maxScore.toFixed(2);
+            document.getElementById('minimum').innerHTML = minScore.toFixed(2);
         } else {
             document.getElementById('average').innerHTML = "0.0";
+            document.getElementById('maximum').innerHTML = "0.0";
+            document.getElementById('minimum').innerHTML = "0.0";
         }
 
         // adds newInputLine, only if all array values satisfy parseFloat 
@@ -64,7 +85,6 @@ function calculator(event) {
 
 // Creates a new input box
 function newInputLine(index) {
-
     // Add a label for each score element
     var title = document.createElement('label');
     title.htmlFor = index;
@@ -88,6 +108,25 @@ function newInputLine(index) {
     // Set focus on the new input line
     document.getElementById(index).focus();
 }
+
+// Function to clear input fields and reset the table
+function clearTable() {
+    var scoresContainer = document.getElementById('scores');
+    scoresContainer.innerHTML = ''; // Remove all existing input lines
+    document.getElementById('total').innerHTML = '0.0';
+    document.getElementById('count').innerHTML = '0.0';
+    document.getElementById('average').innerHTML = '0.0';
+    document.getElementById('maximum').innerHTML = '0.0'; // Reset maximum
+    document.getElementById('minimum').innerHTML = '0.0'; // Reset minimum
+    maxScore = -Infinity; // Reset maximum score
+    minScore = Infinity; // Reset minimum score
+    // Create a new input line after clearing
+    newInputLine(0);
+}
+
+// Attach the clearTable function to the "Clear" button
+var clearButton = document.getElementById('clearButton');
+clearButton.addEventListener('click', clearTable);
 
 // Creates 1st input box on Window load
 newInputLine(0);

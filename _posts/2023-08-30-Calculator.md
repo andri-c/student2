@@ -52,6 +52,10 @@ courses: { compsci: {week: 2} }
       <div class="calculator-number">0</div>
       <div class="calculator-number">.</div>
       <div class="calculator-equals">=</div>
+      <!-- row 5 -->
+      <div class="calculator-operation">√</div>
+      <div class="calculator-operation">/</div>
+
   </div>
 </div>
 
@@ -151,6 +155,32 @@ courses: { compsci: {week: 2} }
       output.innerHTML = firstNumber.toString();
       nextReady = true;
   }
+// ...
+
+// Add event listeners for the new buttons
+const sqrt = document.querySelectorAll(".calculator-operation")[4]; // Square Root
+const divide = document.querySelectorAll(".calculator-operation")[5]; // Division
+
+sqrt.addEventListener("click", function() {
+  squareRoot();
+});
+
+divide.addEventListener("click", function() {
+  operation("/");
+});
+
+// Square Root action
+function squareRoot() {
+  const inputValue = parseFloat(output.innerHTML);
+  if (inputValue >= 0) {
+    output.innerHTML = Math.sqrt(inputValue);
+    nextReady = true;
+  } else {
+    // Handle invalid input (e.g., taking the square root of a negative number)
+    output.innerHTML = "Error";
+    nextReady = true;
+  }
+}
 
   // Clear button listener
   clear.forEach(button => {
