@@ -4,8 +4,8 @@ comments: false
 layout: post
 title: Scientific Calculator
 description: A calculator created through java script.
-type: tangibles
-courses: { compsci: {week: 2} }
+type: hacks
+courses: { compsci: {week: 4} }
 ---
 
 <style>
@@ -55,13 +55,12 @@ courses: { compsci: {week: 2} }
       <!-- row 5 -->
       <div class="calculator-operation">√</div>
       <div class="calculator-operation">/</div>
-
   </div>
 </div>
 
 <!-- JavaScript (JS) implementation of the calculator. -->
 <script>
-  // initialize important variables to manage calculations
+// initialize important variables to manage calculations
   var firstNumber = null;
   var operator = null;
   var nextReady = true;
@@ -105,20 +104,19 @@ courses: { compsci: {week: 2} }
     });
   });
 
+
   // Operator action
-  function operation (choice) { // function to input operations into the calculator
-      if (firstNumber == null) { // once the operation is chosen, the displayed number is stored into the variable firstNumber
-          firstNumber = parseInt(output.innerHTML);
-          nextReady = true;
-          operator = choice;
-          return; // exits function
-      }
-      // occurs if there is already a number stored in the calculator
-      firstNumber = calculate(firstNumber, parseFloat(output.innerHTML)); 
-      operator = choice;
-      output.innerHTML = firstNumber.toString();
-      nextReady = true;
+  function operation(choice) {
+  if (firstNumber === null) {
+    firstNumber = parseFloat(output.innerHTML);
+    nextReady = true;
+  } else {
+    firstNumber = calculate(firstNumber, parseFloat(output.innerHTML));
   }
+  operator = choice;
+  output.innerHTML = firstNumber.toString();
+  nextReady = true;
+}
 
   // Calculator
   function calculate (first, second) { // function to calculate the result of the equation
@@ -176,11 +174,12 @@ function squareRoot() {
     output.innerHTML = Math.sqrt(inputValue);
     nextReady = true;
   } else {
-    // Handle invalid input (e.g., taking the square root of a negative number)
     output.innerHTML = "Error";
     nextReady = true;
   }
 }
+
+
 
   // Clear button listener
   clear.forEach(button => {
@@ -214,6 +213,12 @@ var vantaInstances = {
   net: VANTA.NET,
   rings: VANTA.RINGS
 };
+function clearCalc() {
+  firstNumber = null;
+  operator = null;
+  output.innerHTML = "0";
+  nextReady = true;
+}
 
 // obtain a random vanta function
 var vantaInstance = vantaInstances[Object.keys(vantaInstances)[Math.floor(Math.random() * Object.keys(vantaInstances).length)]];

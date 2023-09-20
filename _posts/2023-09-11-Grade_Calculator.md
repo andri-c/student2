@@ -4,7 +4,7 @@ comments: true
 layout: post
 title: Grade Calculator
 description: This is a grade calculator the helps calculate your average grade.
-courses: { compsci: {week: 3} }
+courses: { compsci: {week: 4} }
 type: hacks
 ---
 
